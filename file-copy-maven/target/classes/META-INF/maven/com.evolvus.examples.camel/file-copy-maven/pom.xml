@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.evolvus.examples.camel</groupId>
-	<artifactId>file-copy</artifactId>
+	<artifactId>file-copy-maven</artifactId>
 	<version>1.0.0.BUILD-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -21,5 +21,19 @@
 			<version>${env.camel.version}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-maven-plugin</artifactId>
+				<version>${env.camel.version}</version>
+				<!-- optional, default value: org.apache.camel.spring.Main -->
+				<configuration>
+					<mainClass>com.evolvus.examples.camel.fileCopy.App</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
