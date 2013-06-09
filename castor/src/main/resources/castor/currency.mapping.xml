@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+
+	<class name="com.evolvus.training.camel.domain.ISO3166">
+
+		<map-to xml="ISO_CURRENCY" />
+
+		<field name="entity" type="string">
+			<bind-xml name="ENTITY" node="element" />
+		</field>
+
+		<field name="currency" type="string">
+			<bind-xml name="CURRENCY" node="element" />
+		</field>
+
+		<field name="alphabeticCode" type="string">
+			<bind-xml name="ALPHABETIC_CODE" node="element" />
+		</field>
+		
+		<field name="numericCode" type="string">
+			<bind-xml name="NUMERIC_CODE" node="element" />
+		</field>
+		
+		<field name="minorUnit" type="string">
+			<bind-xml name="MINOR_UNIT" node="element" />
+		</field>
+		
+	</class>
+
+</mapping>
